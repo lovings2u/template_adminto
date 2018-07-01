@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adminto</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    params[:controller] %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+    <%= yield 'javascript_contents' %>
+  </body>
+</html>
